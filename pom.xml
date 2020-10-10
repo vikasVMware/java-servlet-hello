@@ -12,6 +12,7 @@
     <java.version>1.8</java.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <surefire.reportplugin.version>2.12.4</surefire.reportplugin.version>
   </properties>
   <dependencies>
     <dependency>
@@ -49,4 +50,14 @@
       </plugin>
     </plugins>
   </build>
+         
+  <reporting>
+  <plugins>
+        <plugin>
+           <groupId>org.apache.maven.plugins</groupId>
+           <artifactId>maven-surefire-report-plugin</artifactId>
+           <version>${surefire.reportplugin.version}</version>
+        </plugin>
+  </plugins>
+  </reporting>
 </project>
